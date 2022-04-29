@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.header {
+  padding: 20px 70px 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: pink;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style-type: none;
+}
+.navlist-link {
+  padding: 20px 20px;
+}
+
+.navlist-link a:link,
+.navlist-link a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navlist-link a:hover,
+.navlist-link a:active {
+  color: red;
+  border-bottom: 3px solid red;
+  transition: all 0.3s;
+  /*animation: animate 0.8s ease-out;*/
+}
+
+/*@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} I will try it later */
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header h1 {
+    padding-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .navlist-link {
+    padding: 1px;
+    border-bottom: 1px solid black;
+  }
+  .navlist-link a:hover,
+  .navlist-link a:active {
+    color: red;
+    border: none;
+    transition: all 0.3s;
+  }
+}
